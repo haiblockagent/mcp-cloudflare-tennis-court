@@ -1,0 +1,16 @@
+{
+  "name": "rec-us-mcp-server",
+  "version": "1.0.0",
+  "description": "Tennis court booking MCP server with authentication frontend",
+  "scripts": {
+    "install:all": "cd frontend && npm install && cd ../worker && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "deploy:frontend": "cd frontend && npm run build && wrangler pages deploy dist --project-name mcp-tennis-auth",
+    "dev:worker": "cd worker && wrangler dev",
+    "deploy:worker": "cd worker && wrangler deploy",
+    "deploy:all": "npm run deploy:frontend && npm run deploy:worker",
+    "tail:worker": "cd worker && wrangler tail"
+  },
+  "workspaces": ["frontend", "worker"]
+}

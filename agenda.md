@@ -1,0 +1,47 @@
+## Browser Power: Building MCP Tools That Do Work @ MCP Builders Summit by Featureform && SVB
+
+- [ ] 👋🌊 
+- [ ] Tennis🎾 Booking MCP Server
+    - tool !respond with JSON. Clicks
+- [ ] Demo
+- [ ] MCP servers on Cloudflare
+- [ ] Bindings!
+- [ ] Tools🛠️⚒️
+    - check_tennis_courts
+    - book_and_request_sms
+    - enter_sms_code_and_complete
+- [ ] MCP 🛠️ tips && takes
+    - 🔨 > 🕵️‍♀️
+        - 🔨 quality > orchestration complexity
+    - Use schemas
+        - Zod schemas = valuable
+        - !just validation, but clarity
+    - Avoid tool soup🍲 (!overload)
+        - 1 tool per responsibility
+        - !mix read + write || logic + UI
+            - safer, testable, LLM can flexibly chain
+    - !blindly use tools
+        - 👀 [tool poisoning](https://x.com/lbeurerkellner/status/1907075048118059101?s=46)
+    - MCP ⚒️ != API Wrappers
+    - Design Tools⚒️ like you design endpoints
+        - validate inputs, predict outputs
+        - doc edge cases (ie "this tool might fail if site is down")
+    - Descriptions should be boring
+- [ ] In this project...
+    - Debug in prod
+    - Give tools⚒️ logs🪵. 
+    - Keep DOM interaction as minimal as possible
+    - Watch for layout shifts, button loads
+    - headless browser != headless logic
+        - !just controlling browser, automating judgment
+        - retries, timeouts, fallbacks
+- [ ] What's Next
+    - auth
+    - schedule ie [cron triggers](https://developers.cloudflare.com/workers/configuration/cron-triggers/)
+    - browser MCP tools = LLMs go from text prediction -> task completion
+    - email lizzie@cloudflare.com, 🐦@lizziepika
+- [ ] Resources
+    - [Cloudflare Playwright MCP](https://github.com/cloudflare/playwright-mcp)
+    - [Browser Rendering docs](https://developers.cloudflare.com/browser-rendering/)
+    - [Cloudflare MCP click to deploy](https://developers.cloudflare.com/agents/guides/remote-mcp-server/)
+
